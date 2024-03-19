@@ -1,10 +1,10 @@
-import {Given, When, Then , Before, BeforeStep, After, AfterStep} from "@badeball/cypress-cucumber-preprocessor";
+import { When,Given, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given("user navigates to FB.com",()=>{
     cy.visit("https://en-gb.facebook.com")
 })
 
-When("User verifies the functionality is working", ()=>{
+When("user logs in using Username and Password", ()=>{
     cy.fixture('example').then((user)=>{
         var username=user.username;
         var password=user.pass;
